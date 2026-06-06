@@ -1,0 +1,23 @@
+# Models
+*.pth
+
+# Datasets
+data/
+
+# Outputs
+outputs/
+
+# Test Images
+test_images/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+.venv/
+env/
