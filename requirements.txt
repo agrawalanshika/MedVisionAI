@@ -8,3 +8,5 @@ Pillow
 scikit-learn
 streamlit
 grad-cam
+cv2
+reportlab
