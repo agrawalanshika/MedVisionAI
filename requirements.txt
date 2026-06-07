@@ -10,3 +10,5 @@ streamlit
 grad-cam
 cv2
 reportlab
+pylibjpeg
+pylibjpeg-libjpeg
