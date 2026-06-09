@@ -7,13 +7,11 @@
 
 **MedVisionAI** is a deep learning–powered medical imaging platform that automatically detects the type of scan uploaded, classifies the relevant disease, and generates an explainable, downloadable diagnostic report — all within a single interface.
 
----
 
 ## 🎯 Motivation
 
 Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI was built to explore how AI can assist — not replace — clinicians by providing fast, interpretable predictions across multiple imaging modalities from one unified tool.
 
----
 
 ## ✨ Features
 
@@ -26,8 +24,9 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | PDF Report Generation | Downloadable diagnostic report with scan preview, Grad-CAM, modality info, class probabilities, and AI findings |
 
 ## 📸 Application Demo
-
----
+<p align="left">
+  <img src="assets/demo.gif" width="900">
+</p>
 
 
 ## ⬇️ Project Workflow
@@ -38,7 +37,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 5. **View results** — prediction, confidence bar, and contextual alert
 6. **Download** the full  PDF diagnostic report.
 
----
+
 
 ## 📚 Datasets used and Visualization
  
@@ -49,7 +48,33 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Chest CT | COVID-19 | [SARS-CoV-2 CT Scan Dataset — Kaggle](https://www.kaggle.com/datasets/plameneduardo/sarscov2-ctscan-dataset) |
 | Brain CT | Hemorrhage | [Brain CT Hemorrhage Dataset — Kaggle](https://www.kaggle.com/datasets/abdulkader90/brain-ct-hemorrhage-dataset) |
 
----
+<table>
+<tr>
+<td align="center">
+<img src="assets\Chest Xray\class distribution.png" width="450"><br>
+<!-- <b>Home Screen</b> -->
+</td>
+
+<td align="center">
+<img src="assets\Brain MRI\class distribution.png" width="450"><br>
+<!-- <b>Modality Verification</b> -->
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<img src="assets\Chest CT\class distribution.png" width="450"><br>
+<!-- <b>Disease Analysis</b> -->
+</td>
+
+<td align="center">
+<img src="assets\Brain CT\class distribution.png" width="450"><br>
+<!-- <b>Generated PDF Report</b> -->
+</td>
+</tr>
+</table>
+
+
 
 ## 🤖 Supported Models 
  
@@ -60,7 +85,6 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Chest X-Ray | ResNet-50 | Pneumonia | Normal, Pneumonia |
 | Chest CT | ConvNeXt-Tiny | COVID-19 | COVID, Non-COVID |
 
----
 
 ## 📈 Model Performance
 
@@ -72,13 +96,11 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Chest X-Ray Pneumonia Detection (ResNet50) | XX.XX% |
 | Chest CT COVID Detection (ConvNeXt-Tiny) | XX.XX% |
 
----
 
 ## 🚀 Explainable AI — Grad-CAM
 
-**Why it matters:** Raw predictions alone are not sufficient in a clinical context. Grad-CAM makes the model's reasoning visible by highlighting the anatomical regions — a lesion, an opacification, a bleed — that most influenced the classification. These heatmaps are embedded directly in the downloadable PDF report for radiologist review.\
-
----
+**Why it matters:** Raw predictions alone are not sufficient in a clinical context. Grad-CAM makes the model's reasoning visible by highlighting the anatomical regions — a lesion, an opacification, a bleed — that most influenced the classification. These heatmaps are embedded directly in the downloadable PDF report for radiologist review.
+<img src="assets\Brain CT\assets\Brain CT\grad-cam hemorrhage.png" align="left" >
 
 ## 🛠️ Tech Stack
 
@@ -91,7 +113,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Frontend | Streamlit |
 | Training Environment | Google Colab |
 
----
+
 
 ## 📂 Project Structure
 
@@ -121,7 +143,6 @@ MedVisionAI/
 │
 └── requirements.txt
 ```
----
 
 ## ⚙️ Installation
 
@@ -159,7 +180,6 @@ streamlit run app.py
 ```
 Open `http://localhost:8501` in your browser.
 
----
 
 ## 🔮 Future Work
  
@@ -169,13 +189,11 @@ Open `http://localhost:8501` in your browser.
 - **DICOM metadata parsing** — Display scanner info, slice thickness, and patient metadata from `.dcm` files
 - **Cloud deployment** —  Using Streamlit Community Cloud, Hugging Face Spaces, or AWS
 
----
 
 ## ⚠️ Disclaimer
  
 MedVisionAI is developed strictly for **educational and research purposes**. It is not a certified medical device and must not be used as a substitute for professional clinical diagnosis, treatment, or medical judgment. All outputs should be reviewed by a qualified radiologist or physician. The authors assume no liability for clinical decisions made based on this system.
 
----
 
 ## 👩‍💻 Author
  
