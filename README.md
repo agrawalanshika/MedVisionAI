@@ -91,7 +91,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 <table>
 <tr>
 <td align="center">
-<img src="assets\Brain MRI\train loss curve" width="450"><br></td>
+<img src="assets\Brain MRI\train loss curve.png" width="450"><br></td>
 
 <td align="center">
 <img src="assets\Brain CT\training loss curve.png" width="450"><br>
@@ -99,17 +99,16 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 
 
 </tr>
+<tr>
 </td>
 <td align="center">
 <img src="assets\Chest Xray\Training loss curve.png" width="450"><br>
 </td>
-<tr>
 <td align="center">
 <img src="assets\Chest CT\training loss curve.png" width="450"><br>
 </td>
-
-
 </tr>
+
 </table>
 
 
