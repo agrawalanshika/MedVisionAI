@@ -225,4 +225,4 @@ MedVisionAI is developed strictly for **educational and research purposes**. It 
 
 ## 👩‍💻 Author
  
-## Anshika Agrawal
+### Anshika Agrawal
