@@ -89,7 +89,7 @@
 | Brain CT Hemorrhage Detection (EfficientNet-B0) | 98.46% |
 | Chest X-Ray Pneumonia Detection (ResNet50) | 97.89% |
 | Chest CT COVID Detection (ConvNeXt-Tiny) | 96.98% |
-| Modality Classifier (EfficientNet-B0) | 99.9.00% |
+| Modality Classifier (EfficientNet-B0) | 99.9% |
 
 <table>
 <tr>
