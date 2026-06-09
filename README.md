@@ -82,11 +82,11 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 
 | Model | Accuracy |
 |---------|---------|
+| Brain MRI Tumor Detection (DenseNet121) | 93.75% |
+| Brain CT Hemorrhage Detection (EfficientNet-B0) | 98.46% |
+| Chest X-Ray Pneumonia Detection (ResNet50) | 97.89% |
+| Chest CT COVID Detection (ConvNeXt-Tiny) | 96.98% |
 | Modality Classifier (EfficientNet-B0) | 99.9.00% |
-| Brain MRI Tumor Detection (DenseNet121) | XX.XX% |
-| Brain CT Hemorrhage Detection (EfficientNet-B0) | XX.XX% |
-| Chest X-Ray Pneumonia Detection (ResNet50) | XX.XX% |
-| Chest CT COVID Detection (ConvNeXt-Tiny) | XX.XX% |
 
 <table>
 <tr>
@@ -116,7 +116,10 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 ## 🚀 Explainable AI — Grad-CAM
 
 **Why it matters:** Raw predictions alone are not sufficient in a clinical context. Grad-CAM makes the model's reasoning visible by highlighting the anatomical regions — a lesion, an opacification, a bleed — that most influenced the classification. These heatmaps are embedded directly in the downloadable PDF report for radiologist review.
-<img src="assets\Brain CT\assets\Brain CT\grad-cam hemorrhage.png" align="left" >
+
+<p align="center">
+  <img src="assets/Brain CT/grad-cam hemorrhage.png" width="600">
+</p>
 
 
 ## 🛠️ Tech Stack
@@ -214,4 +217,4 @@ MedVisionAI is developed strictly for **educational and research purposes**. It 
 
 ## 👩‍💻 Author
  
-**Anshika Agrawal**
+## Anshika Agrawal
