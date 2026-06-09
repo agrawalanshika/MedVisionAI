@@ -2,11 +2,13 @@
 
 **MedVisionAI** is a deep learning–powered medical imaging platform that automatically detects the type of scan uploaded, classifies the relevant disease, and generates an explainable, downloadable diagnostic report — all within a single interface.
 
+<br>
 
 ## 🎯 Motivation
 
 Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI was built to explore how AI can assist — not replace — clinicians by providing fast, interpretable predictions across multiple imaging modalities from one unified tool.
 
+<br>
 
 ## ✨ Features
 
@@ -18,11 +20,14 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Grad-CAM Explainability | Heatmap overlays embedded in the PDF report highlight regions that drove each prediction |
 | PDF Report Generation | Downloadable diagnostic report with scan preview, Grad-CAM, modality info, class probabilities, and AI findings |
 
+<br>
+
 ## 📸 Application Demo
 <p align="left">
   <img src="assets/demo.gif" width="900">
 </p>
 
+<br>
 
 ## ⬇️ Project Workflow
 1. **Upload** a medical scan — `.jpg`, `.jpeg`, `.png`, `.webp`, or `.dcm`
@@ -32,6 +37,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 5. **View results** — prediction, confidence bar, and contextual alert
 6. **Download** the full  PDF diagnostic report.
 
+<br>
 
 
 ## 📚 Datasets used and Visualization
@@ -66,7 +72,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 </tr>
 </table>
 
-
+<br>
 
 ## 🤖 Supported Models 
  
@@ -76,6 +82,8 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Brain CT | EfficientNet-B0 | Intracranial Hemorrhage | Normal, Hemorrhage |
 | Chest X-Ray | ResNet-50 | Pneumonia | Normal, Pneumonia |
 | Chest CT | ConvNeXt-Tiny | COVID-19 | COVID, Non-COVID |
+
+<br>
 
 
 ## 📈 Model Performance
@@ -111,16 +119,17 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 
 </table>
 
-
+<br>
 
 ## 🚀 Explainable AI — Grad-CAM
 
 **Why it matters:** Raw predictions alone are not sufficient in a clinical context. Grad-CAM makes the model's reasoning visible by highlighting the anatomical regions — a lesion, an opacification, a bleed — that most influenced the classification. These heatmaps are embedded directly in the downloadable PDF report for radiologist review.
 
-<p align="center">
-  <img src="assets/Brain CT/grad-cam hemorrhage.png" width="600">
+<p align="left">
+  <img src="assets/Brain CT/grad-cam hemorrhage.png" width="900">
 </p>
 
+<br>
 
 ## 🛠️ Tech Stack
 
@@ -133,7 +142,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Frontend | Streamlit |
 | Training Environment | Google Colab |
 
-
+<br>
 
 ## 📂 Project Structure
 
@@ -163,6 +172,8 @@ MedVisionAI/
 │
 └── requirements.txt
 ```
+
+<br>
 
 ## ⚙️ Installation
 
@@ -200,6 +211,7 @@ streamlit run app.py
 ```
 Open `http://localhost:8501` in your browser.
 
+<br>
 
 ## 🔮 Future Work
  
@@ -209,11 +221,13 @@ Open `http://localhost:8501` in your browser.
 - **DICOM metadata parsing** — Display scanner info, slice thickness, and patient metadata from `.dcm` files
 - **Cloud deployment** —  Using Streamlit Community Cloud, Hugging Face Spaces, or AWS
 
+<br>
 
 ## ⚠️ Disclaimer
  
 MedVisionAI is developed strictly for **educational and research purposes**. It is not a certified medical device and must not be used as a substitute for professional clinical diagnosis, treatment, or medical judgment. All outputs should be reviewed by a qualified radiologist or physician. The authors assume no liability for clinical decisions made based on this system.
 
+<br>
 
 ## 👩‍💻 Author
  
