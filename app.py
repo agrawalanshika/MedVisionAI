@@ -188,13 +188,11 @@ def format_prediction(prediction):
         return "Unknown"
 
     mapping = {
-        # ── Chest X-Ray ───────────────────────────────
         "PNEUMONIA":            "Pneumonia",
         "pneumonia":            "Pneumonia",
         "NORMAL":               "Normal",
         "normal":               "Normal",
 
-        # ── Chest CT ──────────────────────────────────
         "COVID":                "Covid",
         "Covid":                "Covid",
         "covid":                "Covid",
@@ -206,13 +204,12 @@ def format_prediction(prediction):
         "non-covid":            "Non-Covid",
         "non covid":            "Non-Covid",
 
-        # ── Brain MRI — with underscore (raw labels) ──
+
         "glioma_tumor":         "Glioma Tumor",
         "meningioma_tumor":     "Meningioma Tumor",
         "pituitary_tumor":      "Pituitary Tumor",
         "no_tumor":             "No Tumor",
 
-        # ── Brain MRI — bare word (model returns name only)
         "Glioma":               "Glioma Tumor",
         "glioma":               "Glioma Tumor",
         "Meningioma":           "Meningioma Tumor",
@@ -223,13 +220,13 @@ def format_prediction(prediction):
         "no tumor":             "No Tumor",
         "No tumor":             "No Tumor",
 
-        # ── Brain MRI — already formatted (idempotent) ─
+    
         "Glioma Tumor":         "Glioma Tumor",
         "Meningioma Tumor":     "Meningioma Tumor",
         "Pituitary Tumor":      "Pituitary Tumor",
         "No Tumor":             "No Tumor",
 
-        # ── Brain CT ──────────────────────────────────
+
         "Hemorrhage":           "Hemorrhage",
         "hemorrhage":           "Hemorrhage",
         "Normal":               "Normal",
@@ -251,9 +248,6 @@ def get_gradcam_components(modality):
 
     return None, None
 
-
-# Tumor prediction labels after formatting —
-# used in get_disease_context for reliable matching
 TUMOR_PREDICTIONS = {
     "glioma tumor",
     "meningioma tumor",
@@ -272,10 +266,10 @@ NEGATIVE_PREDICTIONS = {
 def get_disease_context(prediction, confidence):
     """Return (type, message) based on prediction + confidence."""
 
-    # Always use lowercase for matching
+
     prediction_lower = prediction.lower()
 
-    # ── Low confidence ─────────────────────────────────
+
     if confidence < 70:
         return (
             "warning",
@@ -287,8 +281,7 @@ def get_disease_context(prediction, confidence):
             f"before any action is taken."
         )
 
-    # ── Tumor findings (Brain MRI) ─────────────────────
-    # Match against the set of known formatted tumor names
+  
     if prediction_lower in TUMOR_PREDICTIONS:
         return (
             "error",
@@ -301,7 +294,7 @@ def get_disease_context(prediction, confidence):
             f"Do not act on this result without professional confirmation."
         )
 
-    # ── COVID (Chest CT) ───────────────────────────────
+  
     elif (
         "covid" in prediction_lower
         and "non" not in prediction_lower
@@ -316,7 +309,7 @@ def get_disease_context(prediction, confidence):
             f"assessment are advised."
         )
 
-    # ── Pneumonia (Chest X-Ray) ────────────────────────
+   
     elif "pneumonia" in prediction_lower:
         return (
             "warning",
@@ -327,7 +320,7 @@ def get_disease_context(prediction, confidence):
             f"is recommended before any treatment decision."
         )
 
-    # ── Negative / normal findings ─────────────────────
+ 
     elif prediction_lower in NEGATIVE_PREDICTIONS:
         return (
             "success",
@@ -338,7 +331,7 @@ def get_disease_context(prediction, confidence):
             f"healthcare provider is recommended."
         )
 
-    # ── Fallback ───────────────────────────────────────
+  
     return (
         "info",
         f"**Finding: {prediction}** · "
@@ -439,7 +432,6 @@ if uploaded_file:
 
         image = load_image(uploaded_file)
 
-        # ── Validate before anything else ─────────────
         is_valid, reason = validate_image(image)
 
         if not is_valid:
@@ -448,7 +440,7 @@ if uploaded_file:
             )
             st.stop()
 
-        # ── Toast only on fresh upload ─────────────────
+    
         if (
             "last_uploaded" not in st.session_state
             or st.session_state.last_uploaded != uploaded_file.name
@@ -531,9 +523,7 @@ if uploaded_file:
                     f"{format_modality(modality)}"
                 )
 
-                # ═══════════════════════════════════════
-                # PRE-CONFIRM
-                # ═══════════════════════════════════════
+    
                 if not verification_confirmed:
 
                     st.markdown(
@@ -676,9 +666,7 @@ if uploaded_file:
                             "⏳ Awaiting your review..."
                         )
 
-                # ═══════════════════════════════════════
-                # POST-CONFIRM
-                # ═══════════════════════════════════════
+
                 else:
 
                     verified_answer = st.session_state.get(
