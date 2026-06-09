@@ -102,6 +102,7 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 **Why it matters:** Raw predictions alone are not sufficient in a clinical context. Grad-CAM makes the model's reasoning visible by highlighting the anatomical regions — a lesion, an opacification, a bleed — that most influenced the classification. These heatmaps are embedded directly in the downloadable PDF report for radiologist review.
 <img src="assets\Brain CT\assets\Brain CT\grad-cam hemorrhage.png" align="left" >
 
+
 ## 🛠️ Tech Stack
 
 | Category | Tools |
