@@ -23,7 +23,7 @@
 
 <br>
 
-<img src="assets/medvisionai_demo.gif" width="100%" align="left">
+<img src="assets/demo.gif" width="100%" align="left">
 
 </details>
 
