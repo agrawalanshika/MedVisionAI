@@ -20,7 +20,7 @@
 ## 📸 Application Demo
 <img src="assets/demo.gif" width="100%" align="left">
 
-<br>
+<br><br>
 
 ## ⬇️ Project Workflow
 1. **Upload** a medical scan — `.jpg`, `.jpeg`, `.png`, `.webp`, or `.dcm`
