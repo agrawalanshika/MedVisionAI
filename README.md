@@ -1,7 +1,7 @@
 # 🩺 MedVisionAI - Multimodal Medical Imaging Analysis Platform 
 
 **MedVisionAI** is a deep learning–powered medical imaging platform that automatically detects the type of scan uploaded, classifies the relevant disease, and generates an explainable, downloadable diagnostic report — all within a single interface.<br>
-🎯**Motivation** - Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI was built to explore how AI can assist — not replace — clinicians by providing fast, interpretable predictions across multiple imaging modalities from one unified tool.
+🎯**Motivation** - Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI was built to explore how AI can assist — not replace clinicians by providing fast, interpretable predictions across multiple imaging modalities from one unified tool.
 
 <br>
 
