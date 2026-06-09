@@ -18,9 +18,14 @@
 <br>
 
 ## 📸 Application Demo
-<p align="left">
-  <img src="assets/demo.gif" width="900">
-</p>
+<details>
+<summary>🎬 Click to view MedVisionAI Demo</summary>
+
+<br>
+
+<img src="assets/medvisionai_demo.gif" width="100%" align="left">
+
+</details>
 
 <br>
 
