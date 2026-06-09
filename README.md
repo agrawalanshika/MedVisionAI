@@ -1,9 +1,4 @@
-# 🩺 MedVisionAI - Multimodal Medical Imaging Analysis Platform ( To be updated soon...)
-![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
-![DICOM](https://img.shields.io/badge/DICOM-Supported-blue?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)
+# 🩺 MedVisionAI - Multimodal Medical Imaging Analysis Platform 
 
 **MedVisionAI** is a deep learning–powered medical imaging platform that automatically detects the type of scan uploaded, classifies the relevant disease, and generates an explainable, downloadable diagnostic report — all within a single interface.
 
@@ -52,24 +47,21 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 <tr>
 <td align="center">
 <img src="assets\Chest Xray\class distribution.png" width="450"><br>
-<!-- <b>Home Screen</b> -->
 </td>
 
 <td align="center">
 <img src="assets\Brain MRI\class distribution.png" width="450"><br>
-<!-- <b>Modality Verification</b> -->
+
 </td>
 </tr>
 
 <tr>
 <td align="center">
 <img src="assets\Chest CT\class distribution.png" width="450"><br>
-<!-- <b>Disease Analysis</b> -->
 </td>
 
 <td align="center">
 <img src="assets\Brain CT\class distribution.png" width="450"><br>
-<!-- <b>Generated PDF Report</b> -->
 </td>
 </tr>
 </table>
@@ -95,6 +87,31 @@ Radiological diagnosis is time-intensive and expertise-dependent. MedVisionAI wa
 | Brain CT Hemorrhage Detection (EfficientNet-B0) | XX.XX% |
 | Chest X-Ray Pneumonia Detection (ResNet50) | XX.XX% |
 | Chest CT COVID Detection (ConvNeXt-Tiny) | XX.XX% |
+
+<table>
+<tr>
+<td align="center">
+<img src="assets\Brain MRI\train loss curve" width="450"><br></td>
+
+<td align="center">
+<img src="assets\Brain CT\training loss curve.png" width="450"><br>
+</td>
+
+
+</tr>
+</td>
+<td align="center">
+<img src="assets\Chest Xray\Training loss curve.png" width="450"><br>
+</td>
+<tr>
+<td align="center">
+<img src="assets\Chest CT\training loss curve.png" width="450"><br>
+</td>
+
+
+</tr>
+</table>
+
 
 
 ## 🚀 Explainable AI — Grad-CAM
